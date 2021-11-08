@@ -35,7 +35,9 @@ namespace LaptopShopApi.Controllers
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(int id)
         {
+            //Console.WriteLine(id);
             var laptop = _laptopRepository.GetLaptopById(id);
+            //Console.WriteLine(laptop.Name);
             return new OkObjectResult(laptop);
         }
 
